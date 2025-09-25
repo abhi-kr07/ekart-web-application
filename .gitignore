@@ -1,0 +1,6 @@
+aws-*
+steps*
+servers-infra/.terra*
+servers-infra/terraform.tfstate*
+k8s-infra/.terra*
+k8s-infra/terraform.tfstate*

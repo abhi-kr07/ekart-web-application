@@ -1,0 +1,14 @@
+region                  = "ap-south-1"
+vpc_cidr                = "10.0.0.0/16"
+public_key_name         = "D:/devops_shack/ekart/aws-key.pub"
+private_key_name        = "D:/devops_shack/ekart/aws-key"
+tags                    = {}
+volume_size             = 15
+worker_count            = 1
+subnet_cidr             = "10.0.1.0/24"
+allowed_k8s_cidr_blocks = ["0.0.0.0/0"]
+allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
+pod_network_cidr_block  = null
+master_instance_type    = "t2.medium"
+worker_instance_type    = "t2.small"
+cluster_name = "EKS-1"
