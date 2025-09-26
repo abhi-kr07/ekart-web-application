@@ -11,4 +11,4 @@ spec:
       port: 8070 # The port that the service is running on in the cluster
       targetPort: 8070 # The port exposed by the service
       NodePort: 31000
-  type: NodePort # type of the service.
+  type: nodeport # type of the service.
