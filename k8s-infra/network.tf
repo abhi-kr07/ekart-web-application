@@ -4,9 +4,9 @@ resource "aws_vpc" "my_vpc" {
 }
 
 resource "aws_subnet" "subnet" {
-  vpc_id     = aws_vpc.my_vpc.id
-  cidr_block = var.subnet_cidr
-  tags       = local.tags
+  vpc_id            = aws_vpc.my_vpc.id
+  cidr_block        = var.subnet_cidr
+  tags              = local.tags
   availability_zone = "ap-south-1a"
   # map_public_ip_on_launch = true (As we will assign Elastic IP) 
 

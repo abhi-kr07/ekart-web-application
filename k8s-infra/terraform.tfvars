@@ -11,4 +11,4 @@ allowed_ssh_cidr_blocks = ["0.0.0.0/0"]
 pod_network_cidr_block  = null
 master_instance_type    = "t2.medium"
 worker_instance_type    = "t2.small"
-cluster_name = "EKS-1"
+cluster_name            = "EKS-1"

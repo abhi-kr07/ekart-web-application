@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ######### set hostname #######
 sudo hostnamectl set-hostname sonarqube-server
 

@@ -43,12 +43,12 @@ resource "aws_instance" "master" {
 }
 
 resource "aws_instance" "worker" {
-  count                  = var.worker_count
-  ami                    = data.aws_ami.ubuntu.id
-  subnet_id              = aws_subnet.subnet.id
-  vpc_security_group_ids = [aws_security_group.egress.id, aws_security_group.ingress_internal.id, aws_security_group.k8s-ingress.id, aws_security_group.SSH.id]
-  instance_type          = var.worker_instance_type
-  key_name               = aws_key_pair.key.key_name
+  count                       = var.worker_count
+  ami                         = data.aws_ami.ubuntu.id
+  subnet_id                   = aws_subnet.subnet.id
+  vpc_security_group_ids      = [aws_security_group.egress.id, aws_security_group.ingress_internal.id, aws_security_group.k8s-ingress.id, aws_security_group.SSH.id]
+  instance_type               = var.worker_instance_type
+  key_name                    = aws_key_pair.key.key_name
   associate_public_ip_address = true
 
   root_block_device {
