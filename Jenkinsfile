@@ -108,8 +108,9 @@ pipeline {
             steps {
                 dir("ekart-app") {
                     withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s-token', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://10.0.1.218:6443') {
-                        sh 'kubectl apply -f manifests/ekart-deployment.yml'
-                        sh 'kubectl apply -f manifests/ekart-svc.yml'
+                        sh 'kubectl apply -f manifest/deployment.yml'
+                        sh 'kubectl apply -f manifest/service.yml'
+                        sh 'kubectl get svc -n webapps'
                     }
                 }
             }
